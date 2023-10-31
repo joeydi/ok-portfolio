@@ -1,0 +1,134 @@
+@use "sass:math";
+
+@function rem($size) {
+    @return math.div($size, 16px) * 1rem;
+}
+
+@function letter-spacing($val) {
+    @return math.div($val, 1000) * 1em;
+}
+
+@function aspect($width, $height) {
+    @return math.div($height, $width) * 100%;
+}
+
+@function strip-unit($value) {
+    @return math.div($value, ($value * 0 + 1));
+}
+
+// Fluid Sizing
+
+@mixin fluid-sizing($property, $min-vw, $max-vw, $min-size, $max-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-size);
+    $u4: unit($max-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            #{$property}: $min-size;
+            @media screen and (min-width: $min-vw) {
+                #{$property}: calc(
+                    #{$min-size} + #{strip-unit($max-size - $min-size)} *
+                        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+                );
+            }
+            @media screen and (min-width: $max-vw) {
+                #{$property}: $max-size;
+            }
+        }
+    }
+}
+
+$xxs: 0;
+$xs: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$sans: "effra", sans-serif;
+$serif: "gelica", sans-serif;
+
+$container-max-widths: (
+    xxl: $xxl,
+);
+
+@import "bootstrap/scss/bootstrap-utilities";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/card";
+
+body {
+    line-height: 1.5;
+    font-family: $sans;
+    font-size: 18px;
+}
+
+.container,
+.container-fluid {
+    @include fluid-sizing("padding-left", $md, $xl, 40px, 80px);
+    @include fluid-sizing("padding-right", $md, $xl, 40px, 80px);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    @include fluid-sizing("margin-top", $sm, $xl, 40px, 100px);
+    @include fluid-sizing("margin-bottom", $sm, $xl, 40px, 100px);
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        color: $body-color;
+    }
+}
+
+h1 {
+    margin-bottom: 1em;
+    font-family: $serif;
+    @include fluid-sizing("font-size", $sm, $xl, 24px, 36px);
+}
+
+h2 {
+    margin-bottom: 0.5em;
+    font-family: $serif;
+    @include fluid-sizing("font-size", $sm, $xl, 18px, 24px);
+}
+
+section.hero {
+    @include fluid-sizing("margin-top", $sm, $xl, 100px, 200px);
+    @include fluid-sizing("margin-bottom", $sm, $xl, 100px, 200px);
+
+    p {
+        max-width: 720px;
+        margin: 0 auto;
+        @include fluid-sizing("font-size", $sm, $xl, 18px, 24px);
+    }
+}
+
+section.projects {
+    @include fluid-sizing("margin-top", $sm, $xl, 100px, 200px);
+    @include fluid-sizing("margin-bottom", $sm, $xl, 100px, 200px);
+}
+
+a.project {
+    text-decoration: none;
+    color: $body-color;
+
+    &:hover {
+        color: $body-color;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
