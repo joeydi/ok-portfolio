@@ -4,6 +4,24 @@ import "./styles/main.scss";
 
 const projects = [
     {
+        image: "/adelantehealthcare.png",
+        name: "Adelante Healthcare",
+        description: "",
+        link: "https://adelantehealthcare.com/",
+    },
+    {
+        image: "/prcno.png",
+        name: "Preservation Resource Center of New Orleans",
+        description: "",
+        link: "https://prcnostg.wpengine.com/",
+    },
+    {
+        image: "/wildflowerbread.png",
+        name: "Wildflower Bread Company",
+        description: "",
+        link: "https://wildflowerbread.com/",
+    },
+    {
         image: "/mastcamz.png",
         name: "Mastcam-Z",
         description:
@@ -52,7 +70,7 @@ function App() {
                     <div className="d-flex align-items-center justify-content-between">
                         <img src={logo} width="133" height="30" alt="Okay Plus logo" />
                         <a href="mailto:joeydi@okaypl.us" target="_blank">
-                            Get In Touch
+                            <span class="d-none d-sm-block">Get In Touch</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                                 <path
                                     fill="currentColor"
