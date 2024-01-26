@@ -4,6 +4,48 @@ import "./styles/main.scss";
 
 const projects = [
     {
+        image: "/rigorous.png",
+        name: "Rigorous Technology",
+        description: "",
+        link: "https://rgs-web.vercel.app/",
+    },
+    {
+        image: "/distefanolandscaping.png",
+        name: "di Stefano Landscaping",
+        description: "",
+        link: "https://distefanolandscaping.com/",
+    },
+    {
+        image: "/americanplatingpower.png",
+        name: "American Plating Power",
+        description: "",
+        link: "https://app-comps.netlify.app/",
+    },
+    {
+        image: "/colcap.png",
+        name: "Columbia Capital",
+        description: "",
+        link: "https://colcap.com/",
+    },
+    {
+        image: "/inspace.png",
+        name: "InSpace",
+        description: "",
+        link: "https://inspace.chat/",
+    },
+    {
+        image: "/phxinjurylaw.png",
+        name: "Phoenix Accident and Injury Law Firm",
+        description: "",
+        link: "https://phxinjurylaw.com/",
+    },
+    {
+        image: "/mastcamz.png",
+        name: "NASA Mastcam-Z",
+        description: "",
+        link: "https://mastcamz.asu.edu/",
+    },
+    {
         image: "/adelantehealthcare.png",
         name: "Adelante Healthcare",
         description: "",
@@ -22,35 +64,8 @@ const projects = [
         link: "https://wildflowerbread.com/",
     },
     {
-        image: "/mastcamz.png",
-        name: "Mastcam-Z",
-        description:
-            "This website was built for ASU who designed and built the camera systems that went on the Perseverance Rover, which is currently on Mars.",
-        link: "https://mastcamz.asu.edu/",
-    },
-    {
-        image: "/colcap.png",
-        name: "Columbia Capital",
-        description:
-            "Columbia Capital is a leading investment firm that partners with entrepreneurs to build category-defining businesses. Our goal was to create a website that accurately reflected their position as industry leaders and showcased their success stories.",
-        link: "https://colcap.com/",
-    },
-    {
-        image: "/inspace.png",
-        name: "InSpace",
-        description:
-            "InSpace is a local startup that started at Champlain College. They are building a video chat platform for education.",
-        link: "https://inspace.chat/",
-    },
-    {
-        image: "/phxinjurylaw.png",
-        name: "Phoenix Accident and Injury Law Firm",
-        description: "",
-        link: "https://phxinjurylaw.com/",
-    },
-    {
         image: "/10across.png",
-        name: "Ten Across",
+        name: "ASU Ten Across",
         description: "",
         link: "https://10across.com/",
     },
@@ -87,8 +102,9 @@ function App() {
                         <div className="row justify-content-center">
                             <div className="col-md-10 col-lg-9">
                                 <h1>
-                                    Elevating non-profits and startups to new heights with 15 years of design and development
-                                    expertise.
+                                    Elevating startups, small businesses, and{" "}
+                                    <span style={{ textWrap: "nowrap" }}>non-profits</span> to new heights with 15 years of design
+                                    and development expertise.
                                 </h1>
                                 <p>
                                     Delivering good ideas, responsive design, and clean code to meet the needs of creative
