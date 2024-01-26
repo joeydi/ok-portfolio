@@ -121,7 +121,14 @@ function App() {
                                 return (
                                     <div className="col-sm-6 col-md-4" key={i}>
                                         <a className="project" href={project.link} target="_blank">
-                                            <img class="mb-3" src={project.image} alt="" />
+                                            <img
+                                                loading="lazy"
+                                                class="mb-3"
+                                                src={project.image}
+                                                width="800"
+                                                height="561"
+                                                alt=""
+                                            />
                                             <div>
                                                 <h2>{project.name}</h2>
                                                 <p>{project.description}</p>
