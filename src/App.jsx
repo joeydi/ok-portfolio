@@ -7,19 +7,19 @@ const projects = [
         image: "/rigorous.png",
         name: "Rigorous Technology",
         description: "",
-        link: "https://rgs-web.vercel.app/",
+        link: "https://www.rigorous.co/",
     },
     {
-        image: "/distefanolandscaping.png",
-        name: "di Stefano Landscaping",
+        image: "/nyutov.png",
+        name: "NYU Technology Opportunities & Ventures",
         description: "",
-        link: "https://distefanolandscaping.com/",
+        link: "https://tov.med.nyu.edu/",
     },
     {
         image: "/americanplatingpower.png",
         name: "American Plating Power",
         description: "",
-        link: "https://app-comps.netlify.app/",
+        link: "https://americanplatingpower.com/",
     },
     {
         image: "/colcap.png",
@@ -55,7 +55,7 @@ const projects = [
         image: "/prcno.png",
         name: "Preservation Resource Center of New Orleans",
         description: "",
-        link: "https://prcnostg.wpengine.com/",
+        link: "https://prcno.org/",
     },
     {
         image: "/wildflowerbread.png",
@@ -70,10 +70,10 @@ const projects = [
         link: "https://10across.com/",
     },
     {
-        image: "/nyutov.png",
-        name: "NYU Technology Opportunities & Ventures",
+        image: "/distefanolandscaping.png",
+        name: "di Stefano Landscaping",
         description: "",
-        link: "https://tov.med.nyu.edu/",
+        link: "https://distefanolandscaping.com/",
     },
 ];
 
